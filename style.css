@@ -112,6 +112,21 @@ ul, li {
     color: white;
     border: none;
     padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .form{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form input{
+        margin-right: 0;
+        margin-top: 30px;
+    }
+    .button{
+        margin-top: 30px;
+    }
 }
 .none{
     transition: 2s;
