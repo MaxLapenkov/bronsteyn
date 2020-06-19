@@ -32,7 +32,7 @@ ul, li {
     margin-top: 160px;
 }
 .container{
-    width: 1200px;
+    max-width: 1200px;
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
@@ -55,7 +55,7 @@ ul, li {
 .openable-list{
     display: flex;
     flex-direction: column;
-    width: 600px;
+    max-width: 600px;
 }
 .openable-list p{
     position: relative;
@@ -150,16 +150,23 @@ ul, li {
 }
 @media (max-width: 768px){
     .container {
-        width: 600px;
+        max-width: 600px;
     }
-    .enter-logo img{
-        width: 250px;
-        margin: 0 calc(50% - 125px);
-        margin-top: 100px;
+    .main-list li{
+        font-size: 30px;
+    }
+    .secondary-list li {
+        font-size: 20px;
+    }
+    .third-list li {
+        font-size: 15px;
     }
     .form{
         flex-direction: column;
         align-items: center;
+    }
+    .logo img{
+        width: 300px;
     }
     .form input{
         margin-right: 0;
@@ -167,6 +174,9 @@ ul, li {
     }
     .button{
         margin-top: 30px;
+    }
+    .contacts{
+        flex-direction: column;
     }
 }
 .none{
