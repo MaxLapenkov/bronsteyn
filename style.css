@@ -209,6 +209,11 @@ ul, li {
     }
     .contacts{
         flex-direction: column;
+        align-items: center;
+    }
+    .contacts-modal{
+        margin-top: 10px;
+        margin-bottom: 5px;
     }
     .impressum{
         left: 0;
