@@ -3,6 +3,9 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 a{
     color: inherit;
@@ -15,19 +18,29 @@ ul, li {
     padding: 0;
     list-style: none;
 }
+.logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .logo img{
-    max-width: 500px;
+    max-width: 600px;
 }
 .enter-logo img{
     display: block;
-    margin: 0 calc(50% - 250px);
+    margin: 0 auto;
     margin-top: 160px;
 }
 .container{
-    max-width: 900px;
+    width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin: 0 auto;
     margin-top: 160px;
     margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .main-list{
     margin-top: 100px;
@@ -38,6 +51,11 @@ ul, li {
     margin-left: 50px;
     text-transform: uppercase;
     margin-top: 20px;
+}
+.openable-list{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
 }
 .openable-list p{
     position: relative;
@@ -128,8 +146,12 @@ ul, li {
 .footer-container{
     margin-top: 0;
     margin-bottom: 0;
+    align-items: stretch;
 }
 @media (max-width: 768px){
+    .container {
+        width: 600px;
+    }
     .enter-logo img{
         width: 250px;
         margin: 0 calc(50% - 125px);
