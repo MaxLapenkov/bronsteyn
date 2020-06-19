@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 a{
     color: inherit;
@@ -25,6 +26,7 @@ ul, li {
 }
 .logo img{
     max-width: 600px;
+    max-height: 160px;
 }
 .enter-logo img{
     display: block;
@@ -143,10 +145,40 @@ ul, li {
     flex-direction: row;
     justify-content: space-between;
 }
+.contacts-modal{
+    background-color: inherit;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 .footer-container{
     margin-top: 0;
     margin-bottom: 0;
     align-items: stretch;
+}
+.modal{
+    --modal-width: 750px;
+	text-align: left;
+	max-width: var(--modal-width);
+    padding: 10px;
+    background-color: #F9F9F9;
+    position: absolute;
+    top: 100px;
+    height: 100vh;
+    overflow-y: scroll;
+    left: calc(50% - var(--modal-width) / 2);
+}
+.modal-close{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    position: sticky;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: var(--modal-width);
+    z-index: 1000;
+    cursor: pointer;
 }
 @media (max-width: 768px){
     .container {
@@ -178,8 +210,12 @@ ul, li {
     .contacts{
         flex-direction: column;
     }
+    .impressum{
+        left: 0;
+    }
 }
 .none{
     transition: 2s;
     display: none;
 }
+
