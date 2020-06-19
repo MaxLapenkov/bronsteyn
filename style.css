@@ -215,9 +215,10 @@ ul, li {
         margin-top: 10px;
         margin-bottom: 5px;
     }
-    .impressum{
+    .modal{
         left: 0;
     }
+    
 }
 .none{
     transition: 2s;
