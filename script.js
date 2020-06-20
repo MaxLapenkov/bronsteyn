@@ -30,3 +30,12 @@ const dsgvo= document.querySelector('.dsgvo'),
                 dsgvo.style.top = `${window.pageYOffset}px`
                 document.querySelector('body').style.overflow = 'hidden';
             })
+const logo = document.querySelector('.logo'),
+      footer = document.querySelector('.footer-container'),
+      container = document.querySelector('.container'),
+      content = document.querySelector('.main-list');
+      logo.addEventListener('click', () => {
+          content.classList.remove('none');
+          footer.classList.remove('none');
+          container.classList.add('opened');
+      })
