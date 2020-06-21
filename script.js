@@ -1,10 +1,30 @@
 const textHeader = document.querySelectorAll('.text-header');
-textHeader.forEach(item => {
-    item.addEventListener('click', () => {
-        item.classList.toggle('extended-list')
-        const list = item.nextElementSibling;
-        list.classList.toggle('none');
+// textHeader.forEach(item => {
+//     item.addEventListener('click', () => {
+//         const list = item.nextElementSibling;
+//         list.classList.toggle('none');
+//     })
+// })
+const mainItems = document.querySelectorAll('.main-item');
+mainItems.forEach(item => {
+    item.addEventListener('click', (e) => {
+        if (e.target.classList.contains('main-item')) {
+            item.classList.toggle('extended-list')
+            const list = item.querySelector('.next-list')
+            list.classList.toggle('none');
+        } 
     })
+    const secondaryItems = item.querySelectorAll('.secondary-item')
+    secondaryItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (e.target.classList.contains('secondary-item')) {
+                item.classList.toggle('extended-list')
+                const list = item.querySelector('.next-list')
+                list.classList.toggle('none');
+            }; 
+        })
+    })
+    
 })
 const impressum = document.querySelector('.impressum'),
       impressumOpen = document.getElementById('impressum-open'),
@@ -30,12 +50,3 @@ const dsgvo= document.querySelector('.dsgvo'),
                 dsgvo.style.top = `${window.pageYOffset}px`
                 document.querySelector('body').style.overflow = 'hidden';
             })
-const logo = document.querySelector('.logo'),
-      footer = document.querySelector('.footer-container'),
-      container = document.querySelector('.container'),
-      content = document.querySelector('.main-list');
-      logo.addEventListener('click', () => {
-          content.classList.remove('none');
-          footer.classList.remove('none');
-          container.classList.add('opened');
-      })
