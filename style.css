@@ -308,6 +308,14 @@ margin-top: 160px;
     .openable-list a::before{
     top: 7px;
 }
+.openable-list .secondary-list p::before,
+.openable-list .secondary-list a::before {
+    top: 7px;
+}
+.openable-list .third-list p::before,
+.openable-list .third-list a::before {
+    top: 5px;
+}
 .breadcrumbs{
     justify-content: center;
     align-items: center;
