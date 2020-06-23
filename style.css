@@ -339,6 +339,10 @@ margin-top: 160px;
 html, body, .container {
     height: auto;
 }
+
+.index-container{
+    height: 100vh;
+}
 }
 .none{
     transition: 10s;
