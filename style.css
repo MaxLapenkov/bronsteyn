@@ -243,8 +243,8 @@ margin-top: 160px;
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
-    top: 50px;
-    z-index: 2000;
+    top: 60px;
+    z-index: 3000;
 }
 
 
@@ -310,7 +310,7 @@ margin-top: 160px;
     }
     .modal{
         left: 0;
-        z-index: 1000;
+        z-index: 5000;
     }
 
     .openable-list .arrow-item::before {
