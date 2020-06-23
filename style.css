@@ -220,10 +220,11 @@ margin-top: 160px;
     padding: 10px;
     background-color: #F9F9F9;
     position: absolute;
-    top: 100px;
+    top: 50px;
     height: 100vh;
     overflow-y: scroll;
     left: calc(50% - var(--modal-width) / 2);
+    z-index: 2000;
 }
 .modal-close{
     padding: 0;
@@ -232,7 +233,7 @@ margin-top: 160px;
     position: sticky;
     width: 20px;
     height: 20px;
-    top: 10px;
+    top: 25px;
     left: var(--modal-width);
     z-index: 1000;
     cursor: pointer;
@@ -242,6 +243,8 @@ margin-top: 160px;
     flex-direction: row;
     flex-wrap: wrap;
     position: absolute;
+    top: 50px;
+    z-index: 2000;
 }
 
 
@@ -266,6 +269,9 @@ margin-top: 160px;
     display: none;
 }
 @media (max-width: 768px){
+    .breadcrumbs{
+        top: 25px;
+    }
     .login{
         position: static;
     }
