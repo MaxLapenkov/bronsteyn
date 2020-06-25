@@ -1,4 +1,21 @@
-
+@font-face {
+    font-family: 'Proxima Nova Bold';
+    src: url('fonts/ProximaNova-Bold.eot');
+    src: url('fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ProximaNova-Bold.woff') format('woff'),
+    url('fonts/ProximaNova-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+        font-family: 'Proxima Nova Regular';
+        src: url('fonts/ProximaNova-Regular.eot');
+        src: url('fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/ProximaNova-Regular.woff') format('woff'),
+        url('fonts/ProximaNova-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        }
 html{
     height: 100%;
 }
@@ -8,7 +25,7 @@ body {
     color: white;
     margin: 0;
     position: relative;
-    font-family: 'Orienta', sans-serif;
+    font-family: 'Proxima Nova Regular';
 }
 a{
     color: inherit;
@@ -21,6 +38,7 @@ h1, h2, h3, h4, h5, p {
     margin: 0;
 }
 h2 {
+    font-family: 'Proxima Nova Bold';
     font-size: 26px;
     font-weight: bold;
 }
@@ -88,15 +106,18 @@ margin-top: 160px;
     text-transform: capitalize;
 }
 .main-list li{
-    font-size: 26px;
+    font-size: 20px;
     margin-left: 50px;
     margin-top: 20px;
 }
-.secondary-list li{
+.main-list .header-item {
     font-size: 26px;
 }
-.third-list li{
+.secondary-list li{
     font-size: 15px;
+}
+.third-list li{
+    font-size: 10px;
 }
 .openable-list{
     display: flex;
@@ -113,7 +134,7 @@ margin-top: 160px;
 .openable-list a::before{
     position: absolute;
     content: "";
-    top: 10px;
+    top: 5px;
     left: -30px;
     width: 7px;
     height: 7px;
@@ -133,13 +154,17 @@ margin-top: 160px;
     height: calc(100% - 20px);
     background-color: #545454;
 }
-.openable-list .secondary-list p::before,
-.openable-list .secondary-list a::before {
-    top: 8px;
+.openable-list .secondary-list .secondary-item p::before,
+.openable-list .secondary-list .secondary-item a::before {
+    top: 2px;
 }
 .openable-list .third-list p::before,
 .openable-list .third-list a::before {
-    top: 2px;
+    top: -1px;
+}
+.openable-list .header-item p::before,
+.openable-list .header-item a::before {
+    top: 8px;
 }
 
 .arrow-item {
@@ -150,13 +175,19 @@ margin-top: 160px;
     content: ''; 
     position: absolute;
     left: -60px;
-    top: 12px;
+    top: 8px;
     border: 5px solid transparent;
     border-left: 10px solid #545454;
     transition: 0.5s;
 }
-.openable-list .secondary-item::before {
+.openable-list .header-item::before {
     top: 12px;
+}
+.openable-list .secondary-list a::before {
+    top: 2px;
+}
+.openable-list .secondary-item::before {
+    top: 5px;
 }
 .openable-list .arrow-item.extended-list::before {
 
@@ -318,10 +349,13 @@ margin-top: 160px;
         position: absolute;
         left: auto;
         right: 0;
-        top: 12px;
+        top: 5px;
         border: 5px solid transparent;
         border-left: 10px solid #545454;
         transition: 0.5s;
+    }
+    .openable-list .header-item::before {
+        top: 12px;
     }
     .openable-list .secondary-item::before {
         top: 8px;
@@ -332,11 +366,11 @@ margin-top: 160px;
 }
 .openable-list .secondary-list p::before,
 .openable-list .secondary-list a::before {
-    top: 8px;
+    top: 2px;
 }
 .openable-list .third-list p::before,
 .openable-list .third-list a::before {
-    top: 2px;
+    top: 0;
 }
 .breadcrumbs{
     justify-content: center;
