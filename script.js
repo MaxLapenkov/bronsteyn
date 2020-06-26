@@ -50,3 +50,21 @@ const dsgvo= document.querySelector('.dsgvo'),
                 dsgvo.style.top = `${window.pageYOffset}px`
                 document.querySelector('body').style.overflow = 'hidden';
             })
+const loginBtn = document.querySelector('.login-button'),
+      signupBtn = document.querySelector('.signup-button'),
+      loginStatus = document.querySelector('.login-status'),
+      signupStatus = document.querySelector('.signup-status');
+     
+      if(loginBtn) {
+        loginBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            loginStatus.textContent = 'Login/password incorrect'
+        });
+      }
+      if(signupBtn) {
+        signupBtn.addEventListener('click', (e) => {
+            e.preventDefault()
+            signupStatus.textContent = 'Login/password incorrect'
+        })
+      }
+         
