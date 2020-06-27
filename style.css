@@ -48,6 +48,7 @@ h1, h2, h3, h4, h5, p {
 }
 h2 {
     font-size: 44px;
+    font-variant: small-caps;
     margin-left: 45px;
     margin-bottom: 41px;
 }
@@ -333,6 +334,10 @@ margin-top: 160px;
 }
 .main-list .inner-item {
     margin-top: 16px;
+}
+.main-list .inner-item > a,
+.main-list .inner-item > p{
+    font-variant: small-caps;
 }
 @media (max-width: 768px){
     .breadcrumbs{
