@@ -87,8 +87,8 @@ ul, li {
 }
 .inner-logo{
     margin: 70px auto;
-    margin-top: 212px;
-    margin-bottom: 111px;
+    margin-top: 159px;
+    margin-bottom: 130px;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -255,7 +255,7 @@ margin-top: 160px;
     width: 140px;
     background-color: #282828;
     border: none;
-    padding: 5px;
+    padding: 10px 5px;
     color: white;
     margin-right: 30px;
 }
@@ -342,6 +342,40 @@ margin-top: 160px;
     font-variant: small-caps;
 }
 @media (max-width: 768px){
+    h2 {
+        margin-left: 16px;
+    }
+    .openable-list p, .openable-list a {
+        position: initial;
+    }
+    .openable-list .secondary-list p, .openable-list .secondary-list a {
+        position: relative;
+    }
+    .openable-list .third-list p, .openable-list .third-list a {
+        position: relative;
+    }
+    .openable-list .secondary-list .secondary-item p::before,
+    .openable-list .secondary-list .secondary-item a::before {
+        right: initial;
+        left: -30px;
+    }
+    .openable-list .header-item p::before,
+    .openable-list .header-item a::before {
+        left: initial;
+        right: 9.79px;
+        top: 18px;
+    }
+    .secondary-list {
+        font-size: 32px;
+    }
+    .main-list li {
+        margin-left: 16px;
+        margin-right: 12px;
+    }
+    .secondary-list li {
+        margin-left: 39px;
+        margin-right: 32px;
+    }
     .breadcrumbs{
         top: 25px;
     }
@@ -350,21 +384,23 @@ margin-top: 160px;
     }
     .container {
         padding: 0;
-        max-width: 600px;
     }
     .opened .logo{
         margin-top: 100px;
         }
-    .main-list{
-        margin-top: 50px;
-    }
+
     .form{
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
+    }
+    .form input {
+        width: 45%;
+    }
+    .form input:nth-child(1) {
+        margin-right: 13px;
     }
     .logo img{
-        width: 300px;
-        max-height: 80px;
+        max-width: 448px;
+        min-width: 300px;
     }
     .enter-logo img {
         margin: 0 auto;
@@ -393,29 +429,35 @@ margin-top: 160px;
         content: ''; 
         position: absolute;
         left: auto;
-        right: 0;
-        top: 5px;
+        right: 23px;
+        top: 8px;
         border: 5px solid transparent;
         border-left: 10px solid #545454;
         transition: 0.5s;
     }
     .openable-list .header-item::before {
-        top: 12px;
+        top: 20px;
+        right: 32px;
     }
     .openable-list .secondary-item::before {
-        top: 8px;
+        top: 15px;
+        right: 0;
     }
     .openable-list p::before,
     .openable-list a::before{
-    top: 10px;
+    top: 11px;
+    left: initial;
+    right: 0;
 }
 .openable-list .secondary-list p::before,
 .openable-list .secondary-list a::before {
-    top: 2px;
+    top: 14px;
+    left: -28px;
 }
 .openable-list .third-list p::before,
 .openable-list .third-list a::before {
-    top: 0;
+    top: 9px;
+    left: -15px;
 }
 .breadcrumbs{
     justify-content: center;
@@ -428,10 +470,25 @@ html, body, .container {
 .index-container{
     height: 100vh;
 }
+.openable-list .arrow-item > p::before,
+ .openable-list .arrow-item > a::before {
+     left: initial;
+    right: 0;
+}
+.main-list .inner-item{
+    position: relative;
+}
 }
 .none{
     transition: 10s;
     font-size: 0px;
     display: none;
+}
+@media (max-width: 480px){
+    .logo img {
+        max-width: 448px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
