@@ -342,6 +342,9 @@ margin-top: 160px;
     font-variant: small-caps;
 }
 @media (max-width: 768px){
+    .login-status {
+        margin-top: 30px;
+    }
     h2 {
         margin-left: 16px;
     }
@@ -478,17 +481,19 @@ html, body, .container {
 .main-list .inner-item{
     position: relative;
 }
+.inner-form{
+    margin-left: 16px;
+}
 }
 .none{
     transition: 10s;
     font-size: 0px;
     display: none;
 }
-@media (max-width: 480px){
+@media (max-width: 479px){
     .logo img {
-        max-width: 448px;
-        margin-left: 16px;
-        margin-right: 16px;
+        margin: 0 auto;
+        max-width: 340px;
     }
 }
 
